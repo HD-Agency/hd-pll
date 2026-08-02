@@ -1,0 +1,122 @@
+/* HD PLL AI – row action styles */
+
+.hd-pll-ai-action:focus {
+	outline: none;
+	box-shadow: none;
+}
+
+/* Loading state */
+.hd-pll-ai-action.is-loading {
+	opacity: 0.7;
+	pointer-events: none;
+	cursor: wait;
+}
+
+/* CSS spinner */
+.hd-pll-ai-spinner {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	border: 2px solid #b4b9be;
+	border-top-color: #2271b1;
+	border-radius: 50%;
+	animation: hdPllAiSpin 0.6s linear infinite;
+	vertical-align: middle;
+}
+@keyframes hdPllAiSpin {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+/* ✓ Done badge */
+.hd-pll-ai-done {
+	color: #00a32a;
+	font-weight: 600;
+	font-size: 12px;
+	white-space: nowrap;
+}
+.hd-pll-ai-action.hd-pll-ai-done {
+	color: #00a32a !important;
+	cursor: default;
+	pointer-events: none;
+	text-decoration: none;
+}
+.hd-pll-ai-action.hd-pll-ai-done .dashicons {
+	color: #00a32a;
+}
+.hd-pll-ai-done .dashicons {
+	font-size: 14px;
+	width: 14px;
+	height: 14px;
+	vertical-align: middle;
+	margin-top: -2px;
+}
+
+/* Edit link */
+.hd-pll-ai-edit {
+	color: #2271b1;
+	font-weight: 400;
+	text-decoration: none;
+	margin-left: 2px;
+	font-size: 12px;
+}
+.hd-pll-ai-edit:hover {
+	color: #135e96;
+	text-decoration: underline;
+}
+
+/* Toast notification */
+.hd-pll-ai-toast {
+	display: inline-block;
+	margin-left: 6px;
+	padding: 2px 8px;
+	border-radius: 3px;
+	font-size: 12px;
+	font-weight: 500;
+	animation: hdPllAiFadeIn 0.25s ease;
+	white-space: nowrap;
+	vertical-align: middle;
+}
+.hd-pll-ai-toast--error {
+	background: #fcf0f1;
+	color: #d63638;
+	border: 1px solid #d63638;
+}
+.hd-pll-ai-toast--success {
+	background: #edfaef;
+	color: #00a32a;
+	border: 1px solid #00a32a;
+}
+.hd-pll-ai-toast--fade {
+	opacity: 0;
+	transition: opacity 0.4s ease;
+}
+@keyframes hdPllAiFadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(-4px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* Admin notice bar */
+.hd-pll-ai-notice {
+	animation: hdPllAiSlideDown 0.3s ease;
+}
+.hd-pll-ai-notice a {
+	font-weight: 600;
+}
+@keyframes hdPllAiSlideDown {
+	from {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

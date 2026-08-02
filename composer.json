@@ -1,0 +1,19 @@
+{
+	"name": "plugins/hd-pll",
+	"description": "Standalone, independent Polylang Integration plugin.",
+	"license": "MIT",
+	"autoload": {
+		"psr-4": {
+			"HDPLL\\": "src/"
+		}
+	},
+	"require": {
+		"php": ">=8.1"
+	},
+	"config": {
+		"platform": {
+			"php": "8.1.0"
+		},
+		"optimize-autoloader": true
+	}
+}
